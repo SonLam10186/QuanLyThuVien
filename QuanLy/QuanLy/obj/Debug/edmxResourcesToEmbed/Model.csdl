@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyThuVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DOCGIA">
+    <Key>
+      <PropertyRef Name="MADG" />
+    </Key>
+    <Property Name="MADG" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOAIDOCGIA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+    <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYLAPTHE" Type="DateTime" Precision="0" />
+    <Property Name="NGUOILAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ID">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PASS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+      <PropertyRef Name="HOTEN" />
+    </Key>
+    <Property Name="MANV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGSINH" Type="DateTime" Precision="0" />
+    <Property Name="DIENTHOAI" Type="Int32" />
+    <Property Name="BANGCAP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BOPHAN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CHUCVU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TTSACH">
+    <Key>
+      <PropertyRef Name="MASACH" />
+    </Key>
+    <Property Name="MASACH" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TENSACH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TACGIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="THELOAI" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="NAMXUATBAN" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="NHAXUATBAN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYLAP" Type="DateTime" Precision="0" />
+    <Property Name="TRIGIA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NGUOITIEPNHAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="QuanLyThuVienEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DOCGIAs" EntityType="Self.DOCGIA" />
+    <EntitySet Name="IDs" EntityType="Self.ID" />
+    <EntitySet Name="NVIENs" EntityType="Self.NVIEN" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TTSACHes" EntityType="Self.TTSACH" />
+  </EntityContainer>
+</Schema>

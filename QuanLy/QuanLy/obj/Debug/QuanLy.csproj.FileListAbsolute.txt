@@ -1,0 +1,16 @@
+C:\Users\banhx\source\repos\QuanLy\QuanLy\bin\Debug\QuanLy.exe.config
+C:\Users\banhx\source\repos\QuanLy\QuanLy\bin\Debug\QuanLy.exe
+C:\Users\banhx\source\repos\QuanLy\QuanLy\bin\Debug\QuanLy.pdb
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.FormLogin.resources
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.Properties.Resources.resources
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.csproj.GenerateResource.cache
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.csproj.CoreCompileInputs.cache
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.exe
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.pdb
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.csprojAssemblyReference.cache
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.FormNVIEN.resources
+C:\Users\banhx\source\repos\QuanLy\QuanLy\bin\Debug\EntityFramework.dll
+C:\Users\banhx\source\repos\QuanLy\QuanLy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\banhx\source\repos\QuanLy\QuanLy\bin\Debug\EntityFramework.xml
+C:\Users\banhx\source\repos\QuanLy\QuanLy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\banhx\source\repos\QuanLy\QuanLy\obj\Debug\QuanLy.csproj.CopyComplete

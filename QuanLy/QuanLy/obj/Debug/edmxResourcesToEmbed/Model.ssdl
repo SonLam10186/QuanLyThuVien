@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DOCGIA">
+    <Key>
+      <PropertyRef Name="MADG" />
+    </Key>
+    <Property Name="MADG" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="HOTEN" Type="varchar" MaxLength="50" />
+    <Property Name="LOAIDOCGIA" Type="varchar" MaxLength="2" />
+    <Property Name="NGAYSINH" Type="smalldatetime" />
+    <Property Name="DIACHI" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="NGAYLAPTHE" Type="smalldatetime" />
+    <Property Name="NGUOILAP" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ID">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="ID" Type="varchar" MaxLength="20" />
+    <Property Name="PASS" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="NVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+      <PropertyRef Name="HOTEN" />
+    </Key>
+    <Property Name="MANV" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="HOTEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGSINH" Type="smalldatetime" />
+    <Property Name="DIENTHOAI" Type="int" />
+    <Property Name="BANGCAP" Type="nvarchar" MaxLength="20" />
+    <Property Name="BOPHAN" Type="nvarchar" MaxLength="20" />
+    <Property Name="CHUCVU" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TTSACH">
+    <Key>
+      <PropertyRef Name="MASACH" />
+    </Key>
+    <Property Name="MASACH" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TENSACH" Type="varchar" MaxLength="50" />
+    <Property Name="TACGIA" Type="varchar" MaxLength="50" />
+    <Property Name="THELOAI" Type="varchar" MaxLength="2" />
+    <Property Name="NAMXUATBAN" Type="varchar" MaxLength="4" />
+    <Property Name="NHAXUATBAN" Type="varchar" MaxLength="20" />
+    <Property Name="NGAYLAP" Type="smalldatetime" />
+    <Property Name="TRIGIA" Type="money" />
+    <Property Name="NGUOITIEPNHAN" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="QuanLyThuVienModelStoreContainer">
+    <EntitySet Name="DOCGIA" EntityType="Self.DOCGIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ID" EntityType="Self.ID" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NVIEN" EntityType="Self.NVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TTSACH" EntityType="Self.TTSACH" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
